@@ -22,12 +22,12 @@ describe('AuthenticateUser', () => {
     const user = await createUser.execute({
       name: 'John Doe',
       email: 'johndoe@example.com',
-      password: '123123123',
+      password: '123456',
     });
 
     const response = await authenticateUser.execute({
       email: 'johndoe@example.com',
-      password: '123123123',
+      password: '123456',
     });
 
     expect(response).toHaveProperty('token');
